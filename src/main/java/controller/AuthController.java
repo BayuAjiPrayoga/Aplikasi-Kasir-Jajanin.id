@@ -1,9 +1,14 @@
 package controller;
 
-import database.DatabaseConnection;
-import model.User;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-import java.sql.*;
+import database.DatabaseConnection;
+import model.Admin;
+import model.Kasir;
+import model.User;
 
 public class AuthController {
     public static User login(String username, String password) {
@@ -15,7 +20,12 @@ public class AuthController {
 
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                return new User(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+                String role = rs.getString("role");
+                if ("admin".equalsIgnoreCase(role)) {
+                    return new Admin(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+                } else if ("kasir".equalsIgnoreCase(role)) {
+                    return new Kasir(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+                }
             }
         } catch (SQLException e) {
             System.out.println("Login Error: " + e.getMessage());

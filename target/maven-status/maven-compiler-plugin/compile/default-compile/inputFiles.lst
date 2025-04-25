@@ -1,11 +1,13 @@
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\controller\AdminController.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\controller\TransaksiController.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\controller\AuthController.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\model\User.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\model\Transaksi.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\controller\KasirController.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\controller\UserController.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\model\Produk.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\com\mycompany\jajanin\Main.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\controller\ProdukController.java
-F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin - Copy\src\main\java\database\DatabaseConnection.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\controller\AdminController.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\model\Transaksi.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\database\DatabaseConnection.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\com\mycompany\jajanin\Main.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\controller\TransaksiController.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\model\Kasir.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\controller\ProdukController.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\controller\AuthController.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\model\User.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\controller\KasirController.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\model\Admin.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\model\Produk.java
+F:\A. Kuliah\d. semester 4\A. PBO 2\Jajanin\src\main\java\controller\UserController.java

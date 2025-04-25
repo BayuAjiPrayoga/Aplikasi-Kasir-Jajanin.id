@@ -1,6 +1,6 @@
 package model;
 
-public class User {
+public abstract class User {
     private int id;
     private String username;
     private String password;
@@ -11,7 +11,17 @@ public class User {
         this.password = password;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getUsername() {
         return username;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public abstract void showMenu();
 }

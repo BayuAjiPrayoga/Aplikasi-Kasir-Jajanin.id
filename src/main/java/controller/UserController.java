@@ -5,6 +5,8 @@
 package controller;
 
 import database.DatabaseConnection;
+import model.Admin;
+import model.Kasir;
 import model.User;
 
 import java.sql.*;
@@ -19,7 +21,12 @@ public class UserController {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                return new User(rs.getInt("id"), username, password);
+                String role = rs.getString("role");
+                if ("admin".equalsIgnoreCase(role)) {
+                    return new Admin(rs.getInt("id"), username, password);
+                } else if ("kasir".equalsIgnoreCase(role)) {
+                    return new Kasir(rs.getInt("id"), username, password);
+                }
             }
 
         } catch (SQLException e) {

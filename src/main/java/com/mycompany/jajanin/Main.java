@@ -2,9 +2,7 @@ package com.mycompany.jajanin;
 
 import java.util.Scanner;
 
-import controller.AdminController;
-import controller.KasirController;
-import controller.UserController;
+import controller.AuthController;
 import model.User;
 
 public class Main {
@@ -24,14 +22,10 @@ public class Main {
             String password = scanner.nextLine();
             System.out.println("---------------------------------");
 
-            User user = UserController.login(username, password);
+            User user = AuthController.login(username, password);
             if (user != null) {
                 System.out.println("\nLogin berhasil! Selamat datang, " + user.getUsername() + "!");
-                if (username.equalsIgnoreCase("admin")) {
-                    AdminController.menu();
-                } else {
-                    KasirController.menu(user.getUsername());
-                }
+                user.showMenu(); // Polymorphism
             } else {
                 System.out.println("\nLogin gagal. Username atau password salah. Silakan coba lagi.");
             }

@@ -27,18 +27,23 @@ public class KasirController {
             System.out.print("Jumlah beli: ");
             int jumlah = scanner.nextInt();
 
-            if (!ProdukController.validasiStok(id, jumlah)) {
+            Produk produk = ProdukController.getProdukById(id);
+            if (produk == null) {
+                System.out.println("Produk tidak ditemukan.");
                 continue;
             }
 
-            Produk produk = ProdukController.getProdukById(id);
-            double total = produk.getHarga() * jumlah;
-
-            // Tambahkan transaksi ke daftar
-            daftarTransaksi.add(new Transaksi(id, jumlah, total, LocalDateTime.now()));
+            if (produk.getStok() < jumlah) {
+                System.out.println("Stok tidak mencukupi.");
+                continue;
+            }
 
             // Kurangi stok produk
-            ProdukController.kurangiStok(id, jumlah);
+            ProdukController.updateStok(id, produk.getStok() - jumlah);
+
+            // Tambahkan transaksi ke daftar
+            double total = jumlah * produk.getHarga();
+            daftarTransaksi.add(new Transaksi(id, jumlah, total, LocalDateTime.now()));
 
             System.out.print("\nApakah ingin menambahkan produk lain? (y/n): ");
             String pilihan = scanner.next();
